@@ -34,7 +34,7 @@ fi
 export PATH="${DEPOT_TOOLS}":"$PATH"
 
 gclient config --unmanaged https://pdfium.googlesource.com/pdfium.git
-gclient sync
+gclient sync --no-history
 
 cd pdfium
 
