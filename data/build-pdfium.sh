@@ -2,7 +2,7 @@
 
 echo in build-pdfium ...
 
-set -x
+# set -x
 set -e
 
 PLATFORM=linux-x64
@@ -21,7 +21,7 @@ BUILD_RES="out/Release_${PLATFORM}"
 
 TARGET_PDFIUM="${BASE}/target"
 
-# rm -rf ${BUILD_DIR}
+rm -rf ${BUILD_DIR}
 mkdir -p ${BUILD_DIR}
 cd ${BUILD_DIR}
 
@@ -35,9 +35,6 @@ export PATH="${DEPOT_TOOLS}":"$PATH"
 
 gclient config --unmanaged https://pdfium.googlesource.com/pdfium.git
 gclient sync
-
-# we need a patch or two
-patch -p1 < ${PATCH_DIR}/*.patch
 
 cd pdfium
 

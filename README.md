@@ -4,7 +4,20 @@ See
 
 https://github.com/jcupitt/libvips/issues/689
 
+# Docker build
+
+Enter:
+
+	sudo ./build.sh
+
+Should generate:
+
+	total 28296
+	-rw-r--r-- 1 john lxd 28973765 Jul 11 13:17 libpdfium-master-linux-x64.tar.gz
+
 # Native build
+
+Tried a native build too. For reference:
 
 ### Install depot tools
 
@@ -25,15 +38,3 @@ https://github.com/jcupitt/libvips/issues/689
 	./build/install-build-deps.sh
 
 Fails saying Ubuntu 17.04 is not a supported build platform.
-
-# Docker build
-
-Enter:
-
-	sudo ./build.sh
-
-Should generate:
-
-	total 28296
-	-rw-r--r-- 1 john lxd 28973765 Jul 11 13:17 libpdfium-master-linux-x64.tar.gz
-
